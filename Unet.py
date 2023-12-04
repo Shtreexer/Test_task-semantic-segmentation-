@@ -19,8 +19,8 @@ size = 768
 num_img = 50
 
 
-img_list = glob.glob('/Users/admin/Desktop/Test_task/Work_data/Image/*')
-mask_list = glob.glob('/Users/admin/Desktop/Test_task/Work_data/Mask/*')
+img_list = glob.glob('/Work_data/Image/*')
+mask_list = glob.glob('/Work_data/Mask/*')
 
 img_list.sort()
 mask_list.sort()
@@ -139,4 +139,4 @@ model.summary()
 
 hiss = model.fit(X_train, y_train, batch_size=4, verbose =1, epochs=1, validation_data=(X_test, y_test), shuffle=False)
 
-model.save('/Users/admin/Desktop/Test_task/Model_list/unet_test.keras')
+model.save('/Model_list/unet_test.keras')
